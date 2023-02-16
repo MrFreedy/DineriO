@@ -1,11 +1,12 @@
 package com.dineriO.DineriO.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
-
+@Data
 @Entity
-@Table(name = "COSTUMER")
-public class Costumer {
+@Table(name = "CUSTOMER")
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,11 +17,11 @@ public class Costumer {
     @Column(name="CITY")
     private String city;
 
-    @Column(name="State")
+    @Column(name="STATE")
     private String state;
 
     @Column(name="ZIP")
-    private int zip;
+    private String zip;
 
     @Column(name="PEANUT")
     private boolean hasPeanutAllergies;
